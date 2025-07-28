@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 1086029155}
   - component: {fileID: 1086029156}
   - component: {fileID: 1086029157}
+  - component: {fileID: 1086029158}
   m_Layer: 0
   m_Name: Cat 2
   m_TagString: Untagged
@@ -397,6 +398,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1086029158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086029153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34aa6cec44293324eb42b40b234ccee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skills: []
+  weaknesses: []
+  attackMessage: has attacked
+  defeatMessage: has defeated
 --- !u!1 &1167332978
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1167332979}
+  - component: {fileID: 1167332980}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -431,6 +449,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1167332980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167332978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02116f0f980265449943546abfa2c0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kingKong: {fileID: 1778073359}
+  marvinElMarciano: {fileID: 1086029158}
 --- !u!1 &1616915556
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +534,7 @@ GameObject:
   - component: {fileID: 1778073358}
   - component: {fileID: 1778073356}
   - component: {fileID: 1778073357}
+  - component: {fileID: 1778073359}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -645,3 +678,19 @@ MonoBehaviour:
   groundCheckRadius: 0.5
   moveSpeed: 5
   isGrounded: 0
+--- !u!114 &1778073359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778073352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff29a3b410007af4a85a95ad103f74ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skills: []
+  weaknesses: []
+  attackMessage: has attacked
+  defeatMessage: has defeated
