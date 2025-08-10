@@ -14,6 +14,8 @@ public class SimpleRigidbody2DMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     public bool isGrounded;
+
+    private bool facingRight = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,25 @@ public class SimpleRigidbody2DMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+        
+        // detectar flip visual
+        float moveX = Input.GetAxisRaw("Horizontal");
+        if (moveX > 0 && !facingRight)
+        {
+            Flip();
+        }else if (moveX < 0 && facingRight)
+        {
+            Flip();
+        }
+        
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 
     private void FixedUpdate()
