@@ -3,8 +3,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Se usa el string to hash para optimizar el acceso a los parámetros del Animator
-    private static readonly int IsJumpingId = Animator.StringToHash("IsJumping");
-    private static readonly int SpeedXId = Animator.StringToHash("SpeedX");
+    private static readonly int IsJumpingId = Animator.StringToHash("isJumping");
+    private static readonly int SpeedXId = Animator.StringToHash("xVelocity");
+    private static readonly int SpeedYId = Animator.StringToHash("yVelocity");
 
     [Header("Rigidbody2D Component")]
     [SerializeField] private Rigidbody2D rb;
@@ -72,7 +73,7 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
         // Actualizar el parámetro de velocidad en el Animator
         // para que se ejecute la animación de caminar
-        animator.SetInteger(SpeedXId, moveX);
+        animator.SetFloat(SpeedXId, moveX);
     }
     
     void Flip()
